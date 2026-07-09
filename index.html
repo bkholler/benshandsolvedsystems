@@ -60,6 +60,7 @@
       <h2>Choose your level of mathematical intimacy.</h2>
       <div class="cards three">
         <article class="card">
+          <div class="badge">Basic</div>
           <h3>Gaussian Elimination</h3>
           <p>The classic base package: row-reduction performed lovingly, with each pivot given the dignity it deserves.</p>
           <ul>
@@ -68,8 +69,8 @@
             <li>Optional commentary in the margins</li>
           </ul>
         </article>
-        <article class="card featured-card">
-          <div class="badge">Premium</div>
+        <article class="card">
+          <div class="badge">Plus</div>
           <h3>LU / QR Decomposition</h3>
           <p>For clients who want structure, elegance, and the faint smell of chalk dust in the factorization.</p>
           <ul>
@@ -78,7 +79,8 @@
             <li>Great for repeat right-hand sides</li>
           </ul>
         </article>
-        <article class="card">
+        <article class="card featured-card">
+          <div class="badge">Premium</div>
           <h3>Cramer’s Rule</h3>
           <p>An artisanal luxury product. Impractical, dramatic, and priced accordingly.</p>
           <ul>
@@ -357,7 +359,8 @@
         <div class="section-kicker">Request a solve</div>
         <h2>Send us your matrix. We’ll send back a story.</h2>
         <p>
-          This is a static demo form for the website draft. Wire it to Formspree, Netlify Forms, a custom backend, or one very patient inbox.
+          This is a static demo form for the website draft. To request a hand-solved system, email us at
+          <a href="mailto:benshandsolvedsystems@proton.me">benshandsolvedsystems@proton.me</a>.
         </p>
       </div>
       <form class="order-form" onsubmit="event.preventDefault(); showThanks();">
@@ -393,8 +396,11 @@
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Ben’s Hand-Solved Linear Systems. Matrices solved locally, subject to pivot availability.</p>
-  </footer>
+  <p>
+    © <span id="year"></span> Ben’s Hand-Solved Linear Systems. Matrices solved locally, subject to pivot availability.
+    Contact: <a href="mailto:benshandsolvedsystems@proton.me">benshandsolvedsystems@proton.me</a>
+  </p>
+</footer>
 
   <script src="script.js"></script>
 </body>
