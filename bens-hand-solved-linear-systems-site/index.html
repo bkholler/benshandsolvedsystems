@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ben's Hand-Solved Linear Systems</title>
+  <meta name="description" content="Hand-solved linear systems by real mathematicians, in the artisanal medium of your choice." />
+  <link rel="preload" href="assets/logo.png" as="image" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Ben's Hand-Solved Linear Systems home">
+      <img src="assets/logo.png" alt="Ben's Hand-Solved Linear Systems logo" />
+      <span>Ben’s Hand-Solved Linear Systems</span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#mediums">Mediums</a>
+      <a href="#faq">FAQ</a>
+      <a class="nav-cta" href="#order">Request a solve</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Locally sourced pivots • Free-range row operations</p>
+        <h1>Linear systems, solved by hand. As nature intended.</h1>
+        <p class="lead">
+          We bring mathematics back from black boxes and into the hands of mathematicians. Send us your system; we’ll solve it using Gaussian elimination, LU factorization, QR decomposition, or — for the brave — Cramer’s rule.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#order">Start a request</a>
+          <a class="button secondary" href="#pricing">View rates</a>
+        </div>
+        <div class="trust-row" aria-label="Highlights">
+          <span>No AI*</span>
+          <span>Coffee-stained optional</span>
+          <span>Sparse discounts</span>
+        </div>
+        <p class="fine-print">*We do permit calculators to feel appreciated from a distance.</p>
+      </div>
+      <div class="hero-card" aria-label="Example solved system">
+        <img src="assets/logo.png" alt="Rustic logo showing a hand-solved augmented matrix" />
+      </div>
+    </section>
+
+    <section class="marquee" aria-label="Company motto">
+      <span>Handwritten determinants</span>
+      <span>Ethically erased chalkboards</span>
+      <span>Seasonal eigenvalue pairings</span>
+      <span>Human-grade arithmetic</span>
+    </section>
+
+    <section id="services" class="section services">
+      <div class="section-kicker">Our method</div>
+      <h2>Choose your level of mathematical intimacy.</h2>
+      <div class="cards three">
+        <article class="card">
+          <h3>Gaussian Elimination</h3>
+          <p>The classic base package: row-reduction performed lovingly, with each pivot given the dignity it deserves.</p>
+          <ul>
+            <li>Step-by-step row operations</li>
+            <li>Reduced or echelon form</li>
+            <li>Optional commentary in the margins</li>
+          </ul>
+        </article>
+        <article class="card featured-card">
+          <div class="badge">Premium</div>
+          <h3>LU / QR Decomposition</h3>
+          <p>For clients who want structure, elegance, and the faint smell of chalk dust in the factorization.</p>
+          <ul>
+            <li>Matrix factors clearly displayed</li>
+            <li>Back substitution included</li>
+            <li>Great for repeat right-hand sides</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Cramer’s Rule</h3>
+          <p>An artisanal luxury product. Impractical, dramatic, and priced accordingly.</p>
+          <ul>
+            <li>Hand-expanded determinants</li>
+            <li>Premium patience surcharge</li>
+            <li>Recommended for small systems only</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="section pricing-wrap">
+      <div class="pricing-copy">
+        <div class="section-kicker">Transparent pricing</div>
+        <h2>Bigger systems cost more. Sparse systems get mercy.</h2>
+        <p>
+          Prices scale with the number of equations, variables, method complexity, and density. If your matrix has a lot of zeros, congratulations: your thrift has been noticed.
+        </p>
+        <div class="formula-card">
+          <span class="formula-label">House estimate</span>
+          <code>base + size × method × medium − sparsity discount</code>
+        </div>
+      </div>
+      <div class="calculator" aria-label="Estimate calculator">
+        <h3>Estimate your solve</h3>
+        <label>
+          Equations
+          <input id="rows" type="number" min="1" max="50" value="3" />
+        </label>
+        <label>
+          Variables
+          <input id="cols" type="number" min="1" max="50" value="3" />
+        </label>
+        <label>
+          Nonzero density
+          <input id="density" type="range" min="5" max="100" value="65" />
+          <span id="densityLabel">65%</span>
+        </label>
+        <label>
+          Method
+          <select id="method">
+            <option value="1">Gaussian elimination</option>
+            <option value="1.45">LU factorization</option>
+            <option value="1.75">QR decomposition</option>
+            <option value="3.8">Cramer’s rule</option>
+          </select>
+        </label>
+        <label>
+          Medium
+          <select id="medium">
+            <option value="1">Plain paper, sensible pen</option>
+            <option value="1.25">Chalkboard with Hagaromo chalk</option>
+            <option value="1.5">Papyrus with eagle feather quill</option>
+            <option value="1.9">Rain-soaked Moleskine café edition</option>
+          </select>
+        </label>
+        <output id="price" for="rows cols density method medium">£24</output>
+        <p class="estimate-note">Estimates are binding only after the mathematician has stared at the matrix in silence.</p>
+      </div>
+    </section>
+
+    <section id="mediums" class="section mediums">
+      <div class="section-kicker">Medium menu</div>
+      <h2>Every solution deserves the right substrate.</h2>
+      <div class="medium-list">
+        <div>
+          <span class="medium-icon">☕</span>
+          <h3>Café Notebook</h3>
+          <p>Includes a tasteful coffee ring and one crossed-out false start.</p>
+        </div>
+        <div>
+          <span class="medium-icon">▦</span>
+          <h3>Chalkboard</h3>
+          <p>Hagaromo chalk, soft eraser ghosts, and a photo-ready final tableau.</p>
+        </div>
+        <div>
+          <span class="medium-icon">𓂀</span>
+          <h3>Papyrus Quill</h3>
+          <p>For clients seeking old-world determinant energy.</p>
+        </div>
+        <div>
+          <span class="medium-icon">✍</span>
+          <h3>Margin Notes</h3>
+          <p>Add commentary such as “nice pivot,” “ominous zero,” or “Ben was here.”</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonial">
+      <blockquote>
+        “I sent Ben a sparse 9×9 system and received back a beautifully annotated echelon form with a coffee stain over the third pivot. I wept.”
+      </blockquote>
+      <p>— A satisfied numerical analyst</p>
+    </section>
+
+    <section id="faq" class="section faq">
+      <div class="section-kicker">Frequently asked questions</div>
+      <h2>Before you entrust us with your pivots.</h2>
+      <div class="faq-grid">
+        <details open>
+          <summary>Do you really solve every system by hand?</summary>
+          <p>Yes. Every row operation is performed by a human mathematician with a writing implement, a surface, and an emotionally complex relationship to arithmetic.</p>
+        </details>
+        <details>
+          <summary>Can I request a specific medium?</summary>
+          <p>Absolutely. Choose plain paper, Hagaromo chalkboard, papyrus quill, café notebook, or another sensible artisanal surface. Unusual substrates may require a consultation.</p>
+        </details>
+        <details>
+          <summary>Do sparse systems get a discount?</summary>
+          <p>They do. Zeros are nature’s coupons. The more empty your matrix feels, the more forgiving our estimate becomes.</p>
+        </details>
+        <details>
+          <summary>What if my system has no solution or infinitely many solutions?</summary>
+          <p>We still solve it. Inconsistency and free variables will be clearly marked, annotated, and treated with the dignity expected of all mathematical outcomes.</p>
+        </details>
+        <details>
+          <summary>Is Cramer’s rule available for large systems?</summary>
+          <p>Technically yes, spiritually no. We reserve the right to recommend a less theatrical method before anyone starts expanding a 9×9 determinant by hand.</p>
+        </details>
+        <details>
+          <summary>Will my solution include mistakes?</summary>
+          <p>Not intentionally. Almost certainly.</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="order" class="section order section-grid">
+      <div>
+        <div class="section-kicker">Request a solve</div>
+        <h2>Send us your matrix. We’ll send back a story.</h2>
+        <p>
+          This is a static demo form for the website draft. Wire it to Formspree, Netlify Forms, a custom backend, or one very patient inbox.
+        </p>
+      </div>
+      <form class="order-form" onsubmit="event.preventDefault(); showThanks();">
+        <label>
+          Your name
+          <input type="text" name="name" placeholder="Ada Lovelace" required />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+        <label>
+          System size
+          <input type="text" name="size" placeholder="e.g. 7 equations, 7 variables, sparse" />
+        </label>
+        <label>
+          Desired package
+          <select name="package">
+            <option>Gaussian elimination</option>
+            <option>LU factorization</option>
+            <option>QR decomposition</option>
+            <option>Cramer’s rule</option>
+          </select>
+        </label>
+        <label>
+          Notes for the mathematician
+          <textarea name="notes" rows="4" placeholder="Please use sage-green ink and annotate all pivot choices."></textarea>
+        </label>
+        <button class="button primary" type="submit">Request hand solving</button>
+        <p id="thanks" class="thanks" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Ben’s Hand-Solved Linear Systems. Matrices solved locally, subject to pivot availability.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
