@@ -499,3 +499,191 @@ output {
   .section { padding-inline: 16px; }
   .calculator, .order-form, .card, .medium-list > div { padding: 22px; }
 }
+
+.team-section {
+  padding: 4rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.5rem;
+}
+
+.team-intro {
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.team-card {
+  background: rgba(255, 250, 238, 0.9);
+  border: 2px solid rgba(80, 58, 35, 0.25);
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(65, 45, 25, 0.12);
+  position: relative;
+}
+
+.team-card::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(80, 58, 35, 0.25);
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.team-photo-placeholder {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.25rem;
+  border-radius: 18px;
+  background:
+    linear-gradient(135deg, rgba(126, 91, 54, 0.12), rgba(255, 255, 255, 0.5)),
+    repeating-linear-gradient(
+      -8deg,
+      rgba(80, 58, 35, 0.08),
+      rgba(80, 58, 35, 0.08) 2px,
+      transparent 2px,
+      transparent 8px
+    );
+  border: 2px solid rgba(80, 58, 35, 0.35);
+  display: grid;
+  place-items: center;
+  transform: rotate(-1.5deg);
+  box-shadow: inset 0 0 0 8px rgba(255, 250, 238, 0.65);
+}
+
+.team-photo-placeholder span {
+  font-family: Georgia, serif;
+  font-size: 0.95rem;
+  color: rgba(80, 58, 35, 0.7);
+  line-height: 1.2;
+}
+
+.team-card:nth-child(2) .team-photo-placeholder {
+  transform: rotate(1deg);
+}
+
+.team-card:nth-child(3) .team-photo-placeholder {
+  transform: rotate(-0.5deg);
+}
+
+.team-card h3 {
+  margin: 0.25rem 0;
+  font-size: 1.45rem;
+}
+
+.team-role {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #6b4a2f;
+}
+
+.team-card p {
+  line-height: 1.6;
+}
+
+@media (max-width: 850px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-card {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+
+.origin-story {
+  margin: 3rem auto 0;
+  max-width: 850px;
+  text-align: left;
+  background:
+    radial-gradient(circle at top left, rgba(111, 78, 55, 0.12), transparent 32%),
+    rgba(255, 250, 238, 0.92);
+  border: 2px solid rgba(80, 58, 35, 0.28);
+  border-radius: 28px;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  box-shadow: 0 16px 40px rgba(65, 45, 25, 0.14);
+  position: relative;
+}
+
+.origin-story::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px dashed rgba(80, 58, 35, 0.25);
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.origin-story-label {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(111, 78, 55, 0.12);
+  color: #6b4a2f;
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.origin-story h3 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+  color: #3f2d1f;
+}
+
+.origin-story p {
+  font-size: 1.04rem;
+  line-height: 1.75;
+  color: #4a3627;
+  margin: 0 0 1.1rem;
+}
+
+.origin-story em {
+  font-style: italic;
+  color: #6b4a2f;
+}
+
+.origin-story-signoff {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(80, 58, 35, 0.22);
+  font-weight: 700;
+}
+
+.team-photo {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 1.25rem;
+  display: block;
+  object-fit: cover;
+  border-radius: 18px;
+  border: 2px solid rgba(80, 58, 35, 0.35);
+  box-shadow:
+    inset 0 0 0 8px rgba(255, 250, 238, 0.65),
+    0 8px 20px rgba(65, 45, 25, 0.16);
+  transform: rotate(-1.5deg);
+}
+
+.team-card:nth-child(2) .team-photo {
+  transform: rotate(1deg);
+}
+
+.team-card:nth-child(3) .team-photo {
+  transform: rotate(-0.5deg);
+}
