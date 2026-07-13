@@ -34,8 +34,47 @@ function calculate() {
   price.textContent = pounds(Math.max(12, Math.round(total / 2) * 2));
 }
 
-function showThanks() {
-  thanks.textContent = 'Request received in spirit. Connect this form to a backend before accepting actual matrices.';
+function showThanks(event) {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const formData = new FormData(form);
+
+  const name = formData.get('name')?.trim() || 'Not provided';
+  const email = formData.get('email')?.trim() || 'Not provided';
+  const size = formData.get('size')?.trim() || 'Not specified';
+  const selectedPackage = formData.get('package') || 'Not specified';
+  const notes = formData.get('notes')?.trim() || 'No additional notes';
+
+  const subject = `Hand-Solved Linear System Request from ${name}`;
+
+  const body = [
+    `Hello Ben's Hand-Solved Linear Systems,`,
+    ``,
+    `I would like to request an artisanal hand-solved linear system.`,
+    ``,
+    `Name: ${name}`,
+    `Email: ${email}`,
+    `System size: ${size}`,
+    `Desired package: ${selectedPackage}`,
+    ``,
+    `Notes for the mathematician:`,
+    notes,
+    ``,
+    `I will attach or paste the linear system before sending this email.`,
+    ``,
+    `Please let me know the estimated price and turnaround time.`,
+  ].join('\n');
+
+  const mailtoUrl =
+    `mailto:benshandsolvedsystems@proton.me` +
+    `?subject=${encodeURIComponent(subject)}` +
+    `&body=${encodeURIComponent(body)}`;
+
+  thanks.textContent =
+    'Opening your email app. Please attach or paste your matrix before sending.';
+
+  window.location.href = mailtoUrl;
 }
 
 [rows, cols, density, method, medium].forEach((input) => {
